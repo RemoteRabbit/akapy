@@ -1,7 +1,2 @@
-import Hello
-
-
-def main():
-    # APP CODE
-    app = Hello.Hello()
-    print(app.hello_world())
+def hello():
+    print("Hello World")

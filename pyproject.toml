@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "akapy"
-version = "0.0.2"
+version = "0.0.3"
 description = "A Akamai API wrapper for Python!"
 authors = ["Tristan Jahnke <trjahnke@protonmail.com>"]
 license = "GPL-3.0-only"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.9"
 
 
 [build-system]
