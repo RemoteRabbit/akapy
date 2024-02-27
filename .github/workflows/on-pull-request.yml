@@ -1,6 +1,6 @@
 name: Pull Request Workflow
 on:
-  pull_request_target:
+  pull_request:
     - opened
     - edited
     - synchronize
