@@ -19,7 +19,7 @@ jobs:
           token: ${{ secrets.REPO_PAT }}
           release-type: python
 
-    pypi-dry-run:
-      uses: ./.github/workflows/python-publish.yml
-      with:
-        DRY_RUN: true
+  pypi-dry-run:
+    uses: ./.github/workflows/python-publish.yml
+    with:
+      DRY_RUN: true
