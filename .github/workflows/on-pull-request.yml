@@ -23,3 +23,11 @@ jobs:
             revert
             chore
           requireScope: false
+
+  dry-run:
+    name: Dry-Run Pypi
+    uses: ./.github/workflows/python-publish.yml
+    secrets: inherit
+    with:
+      DRY_RUN: true
+      PUBLISH: false
