@@ -20,6 +20,8 @@ jobs:
           release-type: python
 
   pypi-dry-run:
+    inherit: secrets
+    needs: release-please
     uses: ./.github/workflows/python-publish.yml
     with:
       DRY_RUN: true
