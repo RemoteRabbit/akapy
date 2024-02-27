@@ -3,9 +3,10 @@ on:
   release:
     types: [published]
 jobs:
-  name: Publish
-  uses: ./.github/workflows/python-publish.yml
-  secrets: inherit
-  with:
-    DRY_RUN: false
-    PUBLISH: true
+  publish:
+    - name: Publish
+      uses: ./.github/workflows/python-publish.yml
+      secrets: inherit
+      with:
+        DRY_RUN: false
+        PUBLISH: true
