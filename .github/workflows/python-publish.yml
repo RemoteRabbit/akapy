@@ -1,11 +1,35 @@
 name: Upload Python Package
 on:
-  release:
-    types: [published]
+  workflow_call:
+    inputs:
+      DRY_RUN:
+        description: Bool to check for dry-run
+        type: boolean
+        default: true
+      PUBLISH:
+        description: Bool if to publish to PyPi Prod
+        type: boolean
+        default: false
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  deploy:
+  dry-run:
+    if: ${{ inputs.DRY_RUN }}
+    name: PyPi Dry-Run
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and dry-run publish to PyPi
+        uses: JRubics/poetry-publish@v2.0
+        with:
+          pypi_token: ${{ secrets.PYPI_API_TOKEN }}
+          poetry_install_options: "--sync"
+          poetry_publish_options: "--dry-run"
+  
+  publish:
+    if: ${{ inputs.PUBLISH }}
+    name: Publish to PyPi
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -13,19 +37,4 @@ jobs:
         uses: JRubics/poetry-publish@v2.0
         with:
           pypi_token: ${{ secrets.PYPI_API_TOKEN }}
-          poetry_install_options: "--sync --no-root"
-          poetry_publish_options: "--dry-run"
-    # - name: Set up Python
-    #   uses: actions/setup-python@v3
-    #   with:
-    #     python-version: '^3.12'
-    # - name: Install dependencies
-    #   run: |
-    #     python -m pip install --upgrade pip
-    # - name: Build package
-    #   run: poetry publish --build
-    # - name: Publish package
-    #   uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
-    #   with:
-    #     user: __token__
-    #     password: ${{ secrets.PYPI_API_TOKEN }}
+          poetry_install_options: "--sync"

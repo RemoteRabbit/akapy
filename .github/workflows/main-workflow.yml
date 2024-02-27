@@ -7,9 +7,10 @@ permissions:
   contents: write
   pull-requests: write
 
-name: release-please
+name: Main Workflow
 
 jobs:
+  # TODO: Jobs and or workflows for testing
   release-please:
     runs-on: ubuntu-latest
     steps:
@@ -17,3 +18,8 @@ jobs:
         with:
           token: ${{ secrets.REPO_PAT }}
           release-type: python
+
+    pypi-dry-run:
+      uses: ./.github/workflows/python-publish.yml
+      with:
+        DRY_RUN: true
