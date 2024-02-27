@@ -2,10 +2,11 @@ name: Publish to pypi
 on:
   release:
     types: [published]
-  workflow_call:
 jobs:
-  name: Publish
-  uses: ./.github/workflows/python-publish.yml
-  with:
-    DRY_RUN: false
-    PUBLISH: true
+  publish:
+    name: Publish
+    uses: ./.github/workflows/python-publish.yml
+    secrets: inherit
+    with:
+      DRY_RUN: false
+      PUBLISH: true

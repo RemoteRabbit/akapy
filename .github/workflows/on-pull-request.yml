@@ -1,9 +1,7 @@
 name: Pull Request Workflow
 on:
   pull_request_target:
-    - opened
-    - edited
-    - synchronize
+    types: [opened, edited, synchronize]
 permissions:
   pull-requests: read
 jobs:
@@ -23,3 +21,11 @@ jobs:
             revert
             chore
           requireScope: false
+
+  dry-run:
+    name: Dry-Run Pypi
+    uses: ./.github/workflows/python-publish.yml
+    secrets: inherit
+    with:
+      DRY_RUN: true
+      PUBLISH: false
