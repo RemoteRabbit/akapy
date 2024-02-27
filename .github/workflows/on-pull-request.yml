@@ -4,6 +4,7 @@ on:
     types: [opened, edited, synchronize]
 permissions:
   pull-requests: read
+  contents: read
 jobs:
   lint-title:
     name: Validate PR Title
