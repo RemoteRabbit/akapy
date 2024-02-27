@@ -4,9 +4,9 @@ on:
     types: [published]
 jobs:
   publish:
-    - name: Publish
-      uses: ./.github/workflows/python-publish.yml
-      secrets: inherit
-      with:
-        DRY_RUN: false
-        PUBLISH: true
+    name: Publish
+    uses: ./.github/workflows/python-publish.yml
+    secrets: inherit
+    with:
+      DRY_RUN: false
+      PUBLISH: true
