@@ -8,12 +8,12 @@ permissions:
   contents: write
 jobs:
   deploy:
-    runs-on: alpine:3.19
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Poetry Setup
         run: |
-          apk add poetry
+          curl -sSL https://install.python-poetry.org | POETRY_HOME=/etc/poetry python3 -
           poetry install --no-root
       - name: Configure Git Credentials
         run: |
