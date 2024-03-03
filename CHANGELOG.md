@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/RemoteRabbit/akapy/compare/v0.0.4...v0.1.0) (2024-03-03)
+
+
+### Features
+
+* Add basic Auth and retry logic ([#33](https://github.com/RemoteRabbit/akapy/issues/33)) ([0ae04dd](https://github.com/RemoteRabbit/akapy/commit/0ae04ddcc55561b42740b9b967ecda31993a5de6))
+
 ## [0.0.4](https://github.com/RemoteRabbit/akapy/compare/0.0.3...v0.0.4) (2024-02-27)
 
 
