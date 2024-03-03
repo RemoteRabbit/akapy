@@ -5,6 +5,15 @@ description = "A Akamai API wrapper for Python!"
 authors = ["Tristan Jahnke <trjahnke@protonmail.com>"]
 license = "GPL-3.0-only"
 readme = "README.md"
+homepage = "https://remoterabbit.github.io/akapy/"
+repository = "https://github.com/RemoteRabbit/akapy"
+documentation = "https://remoterabbit.github.io/akapy/"
+keywords = ["akamai", "python-wrapper"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Topic :: Software Development :: Build Tools",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"

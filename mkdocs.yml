@@ -2,13 +2,47 @@ site_name: Akapy Documentation
 
 theme:
   name: "material"
+  features:
+    - navigation.sections
+    - navigation.expand
+    - toc.follow
+    - toc.integrate 
+    - navigation.top
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 
 plugins:
   - mkdocstrings
+  - search
+
+mkdocstrings:
+  handlers:
+    python:
+      rendering:
+        show_root_toc_entry: false
+  default_handler: python
 
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
   - Guides: how-to-guides.md
   - References:
+    - Akapy: references/akapy.md
     - Auth: references/auth.md
+    - Cloudlets: references/cloudlets.md
