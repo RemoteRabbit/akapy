@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Poetry Setup
+        run: |
+          apt install poetry
+          poetry install --no-root
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
