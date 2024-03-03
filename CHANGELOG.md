@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/RemoteRabbit/akapy/compare/v0.1.0...v0.2.0) (2024-03-03)
+
+
+### Features
+
+* Base setup for Documentation with mkdocs ([#35](https://github.com/RemoteRabbit/akapy/issues/35)) ([082446b](https://github.com/RemoteRabbit/akapy/commit/082446b483582626869480766786f7e7889a4c29))
+
 ## [0.1.0](https://github.com/RemoteRabbit/akapy/compare/v0.0.4...v0.1.0) (2024-03-03)
 
 
