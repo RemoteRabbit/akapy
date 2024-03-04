@@ -20,8 +20,15 @@ class Cloudlet:
         self.endpoint = "cloudlets/api/v2"
         self.requester = Requester(self.auth.get_session(), self.auth.host_url)
 
-    def get_all(self):
+    def get_all(self) -> dict:
+        """Gets information on all cloudlets.
+
+        Makes a GET request to the /cloudlet-info endpoint to retrieve
+        information on all available cloudlets.
+
+        Returns:
+            A response object containing information on all cloudlets.
+        """
         return self.requester.make_request(
-            method = "GET",
-            endpoint = f"{self.endpoint}/cloudlet-info"
+            method="GET", endpoint=f"{self.endpoint}/cloudlet-info"
         )
