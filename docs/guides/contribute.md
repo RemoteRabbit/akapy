@@ -10,10 +10,13 @@
 mkdir -p $HOME/repos/open-source
 git clone https://github.com/RemoteRabbit/akapy.git >> $HOME/repos/open-source
 tms $HOME/repos/open-source/akapy
-
-# If you don't use tmux-session-wizard
-cd $HOME/repos/open-source/akapy
 ```
+
+#### General Way
+```sh
+git clone https://github.com/RemoteRabbit/akapy.git
+```
+
 
 #### Setup pre-commit
 
