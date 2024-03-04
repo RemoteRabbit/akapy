@@ -2,6 +2,8 @@ site_name: Akapy Documentation
 
 theme:
   name: "material"
+  favicon: assets/favicon.png
+  logo: assets/full.png
   features:
     - navigation.sections
     - navigation.expand
@@ -51,8 +53,9 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started: getting-started.md
-  - Guides: how-to-guides.md
+  - Guides:
+    - Getting Started: guides/getting-started.md
+    - Contributing: guides/contribute.md
   - References:
     - Akapy: references/akapy.md
     - Auth: references/auth.md
