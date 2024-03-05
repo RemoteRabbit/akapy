@@ -1,5 +1,8 @@
 site_name: Akapy Documentation
-
+repo_url: https://www.github.com/RemoteRabbit/akapy
+repo_name: RemoteRabbit/akapy
+icon:
+  repo: fontawesome/brands/github
 theme:
   name: "material"
   favicon: assets/favicon.png
@@ -32,6 +35,8 @@ theme:
         name: Switch to system preference
 
 plugins:
+  - git-revision-date-localized:
+      enable_create_date: true
   - mkdocstrings
   - search
 

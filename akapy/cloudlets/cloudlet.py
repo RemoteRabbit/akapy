@@ -127,8 +127,6 @@ class Cloudlet:
         if cloudlet_id is not None:
             params += f"&cloudletId={self._get_cloudlet_id(cloudlet_id)}"
 
-        print(params)
-
         return self.requester(
             endpoint=f"{self.endpoint}/policies{params}", 
             method="GET"
