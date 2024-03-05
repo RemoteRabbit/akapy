@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/RemoteRabbit/akapy/compare/v0.3.0...v0.3.1) (2024-03-05)
+
+
+### Bug Fixes
+
+* Update docs with button to repo ([#42](https://github.com/RemoteRabbit/akapy/issues/42)) ([3c961c5](https://github.com/RemoteRabbit/akapy/commit/3c961c5f09fff90890c51fb4a3989ce6928d4e0f))
+
 ## [0.3.0](https://github.com/RemoteRabbit/akapy/compare/v0.2.0...v0.3.0) (2024-03-05)
 Cloudlet Updates ([#40](https://github.com/RemoteRabbit/akapy/issues/40)) ([7137d5d](https://github.com/RemoteRabbit/akapy/commit/7137d5df310c0012d153f7d3a71eecd6b51e9025))
 
