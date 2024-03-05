@@ -5,8 +5,6 @@ Home to a Python wrapper for the Akamai API.
 ## How to use?
 
 ```python
-import akapy as ak
-
 cloudlet = ak.Cloudlet()
 print(cloudlet.get_all())
 
