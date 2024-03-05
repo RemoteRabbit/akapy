@@ -1,8 +1,6 @@
-# How to use Cloudlets
+# Example using Akapy
 
-::: akapy.Cloudlet
-
-## Example Code
+## The Code
 
 ```python
 import akapy as ak
@@ -12,7 +10,8 @@ c = akapy.Cloudlet()
 print(c.get_all())
 ```
 
-### Return
+
+## The Return
 
 ```sh
 [

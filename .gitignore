@@ -1,3 +1,6 @@
 dist
 __pycache__
 test.py
+site/
+.ruff_cache
+.pytest_cache
