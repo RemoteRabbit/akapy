@@ -2,7 +2,7 @@ from .auth import Auth
 from .cloudlets import Cloudlet
 from .requester import Requester
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 """
 The akapy package imports the Auth, Cloudlet, and Requester classes, as well as defines the __version__ variable.
