@@ -2,6 +2,7 @@ import requests
 import shutil
 from pprint import pprint
 from urllib.parse import urljoin
+from typing import Dict, Union, Any
 
 
 class Requester:
@@ -11,14 +12,16 @@ class Requester:
         self.host_url = host_url
         self.response_cache = {}
 
-    def print_error(self, message, response):
+    def print_error(self, message: str, response):
         """Print error message and response (if provided)."""
         print("=" * shutil.get_terminal_size().columns)
         print(message)
         if response:
             pprint(response)
 
-    def make_request(self, endpoint, method, **kwargs) -> dict:
+    def make_request(
+        self, endpoint: str, method: Union["GET", "POST", "PUT", "DELETE"], **kwargs
+    ) -> Dict:
         """
         Make API request to endpoint.
 
@@ -61,3 +64,6 @@ class Requester:
         except requests.exceptions.RequestException as e:
             self.print_error("SOME ERROR OCCURRED", e)
             return {}
+
+    def __call__(self, **kwargs: Any) -> Any:
+        return self.make_request(**kwargs)
