@@ -1,6 +1,7 @@
 from .auth import Auth
-from .cloudlets import Cloudlet
+from .Cloudlets import *
 from .requester import Requester
+from .NetLists import *
 
 __version__ = "0.3.1"
 

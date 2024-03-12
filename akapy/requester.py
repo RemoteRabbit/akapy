@@ -1,8 +1,8 @@
 import requests
 import shutil
 from pprint import pprint
-from urllib.parse import urljoin
-from typing import Dict, Union, Any
+from urllib.parse import urlencode, urljoin
+from typing import Dict, Union, List
 
 
 class Requester:
@@ -21,7 +21,7 @@ class Requester:
 
     def make_request(
         self, endpoint: str, method: Union["GET", "POST", "PUT", "DELETE"], **kwargs
-    ) -> Dict:
+    ) -> Dict[str, Union[str, int, List]]:
         """
         Make API request to endpoint.
 
@@ -65,5 +65,14 @@ class Requester:
             self.print_error("SOME ERROR OCCURRED", e)
             return {}
 
-    def __call__(self, **kwargs: Any) -> Any:
-        return self.make_request(**kwargs)
+    def __call__(
+        self,
+        endpoint: str,
+        method: str,
+        params: Dict[str, Union[str, int, List]] = {},
+        data: Dict[str, Union[str, int, List]] = {},
+        **kwargs,
+    ) -> List[Dict[str, Union[str, int, List]]]:
+        return self.make_request(
+            endpoint, method, params=urlencode(params), data=data, **kwargs
+        )

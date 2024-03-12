@@ -57,7 +57,7 @@ class Cloudlet:
     def get_all(self) -> List[Dict]:
         """Gets information on all cloudlets.
 
-        Makes a GET request to the /cloudlet-info endpoint to retrieve 
+        Makes a GET request to the /cloudlet-info endpoint to retrieve
         a list of dictionaries containing information on all available cloudlets.
 
         Returns:
@@ -69,7 +69,7 @@ class Cloudlet:
         """Get cloudlet type information.
 
         Args:
-            cloudlet_id (Union[int, str]): The cloudlet type identifier, 
+            cloudlet_id (Union[int, str]): The cloudlet type identifier,
                 either as an integer or a name/abbreviation string.
                 Cloudlet type options:
                     0: "Edge Redirector" (ER)
@@ -90,7 +90,8 @@ class Cloudlet:
         """
 
         return self.requester(
-            method="GET", endpoint=f"{self.endpoint}/{self._get_cloudlet_id(cloudlet_id)}"
+            method="GET",
+            endpoint=f"{self.endpoint}/{self._get_cloudlet_id(cloudlet_id)}",
         )
 
     def list_groups(self) -> List[Dict]:
@@ -106,9 +107,7 @@ class Cloudlet:
         return self.requester(endpoint=f"{self.endpoint}/group-info", method="GET")
 
     def list_policies(
-        self, 
-        is_deleted: bool = False, 
-        cloudlet_id: Union[int, str, None] = None
+        self, is_deleted: bool = False, cloudlet_id: Union[int, str, None] = None
     ) -> List[Dict]:
         """
         List policies filtered by deleted status and cloudlet ID.
@@ -117,10 +116,10 @@ class Cloudlet:
             is_deleted: Whether to include deleted policies.
             cloudlet_id: Optional cloudlet ID to filter by. Can pass:
                 - Integer cloudlet ID
-                - String abbreviation (e.g. "ER") 
+                - String abbreviation (e.g. "ER")
                 - Full cloudlet name (e.g. "Edge Redirector")
 
-        Returns: 
+        Returns:
             List of dictionaries containing policy information.
         """
         params = f"?includeDeleted={is_deleted}"
@@ -128,6 +127,5 @@ class Cloudlet:
             params += f"&cloudletId={self._get_cloudlet_id(cloudlet_id)}"
 
         return self.requester(
-            endpoint=f"{self.endpoint}/policies{params}", 
-            method="GET"
+            endpoint=f"{self.endpoint}/policies{params}", method="GET"
         )
