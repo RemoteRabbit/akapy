@@ -333,20 +333,21 @@ smmap = ">=3.0.1,<6"
 
 [[package]]
 name = "gitpython"
-version = "3.1.42"
+version = "3.1.44"
 description = "GitPython is a Python library used to interact with Git repositories"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "GitPython-3.1.42-py3-none-any.whl", hash = "sha256:1bf9cd7c9e7255f77778ea54359e54ac22a72a5b51288c457c881057b7bb9ecd"},
-    {file = "GitPython-3.1.42.tar.gz", hash = "sha256:2d99869e0fef71a73cbd242528105af1d6c1b108c60dfabd994bf292f76c3ceb"},
+    {file = "GitPython-3.1.44-py3-none-any.whl", hash = "sha256:9e0e10cda9bed1ee64bc9a6de50e7e38a9c9943241cd7f585f6df3ed28011110"},
+    {file = "gitpython-3.1.44.tar.gz", hash = "sha256:c87e30b26253bf5418b01b0660f818967f3c503193838337fe5e573331249269"},
 ]
 
 [package.dependencies]
 gitdb = ">=4.0.1,<5"
 
 [package.extras]
-test = ["black", "coverage[toml]", "ddt (>=1.1.1,!=1.4.3)", "mock", "mypy", "pre-commit", "pytest (>=7.3.1)", "pytest-cov", "pytest-instafail", "pytest-mock", "pytest-sugar"]
+doc = ["sphinx (>=7.1.2,<7.2)", "sphinx-autodoc-typehints", "sphinx_rtd_theme"]
+test = ["coverage[toml]", "ddt (>=1.1.1,!=1.4.3)", "mock", "mypy", "pre-commit", "pytest (>=7.3.1)", "pytest-cov", "pytest-instafail", "pytest-mock", "pytest-sugar", "typing-extensions"]
 
 [[package]]
 name = "griffe"
@@ -609,20 +610,20 @@ mkdocs = ">=1.1"
 
 [[package]]
 name = "mkdocs-git-revision-date-localized-plugin"
-version = "1.2.4"
+version = "1.4.5"
 description = "Mkdocs plugin that enables displaying the localized date of the last git modification of a markdown file."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "mkdocs-git-revision-date-localized-plugin-1.2.4.tar.gz", hash = "sha256:08fd0c6f33c8da9e00daf40f7865943113b3879a1c621b2bbf0fa794ffe997d3"},
-    {file = "mkdocs_git_revision_date_localized_plugin-1.2.4-py3-none-any.whl", hash = "sha256:1f94eb510862ef94e982a2910404fa17a1657ecf29f45a07b0f438c00767fc85"},
+    {file = "mkdocs_git_revision_date_localized_plugin-1.4.5-py3-none-any.whl", hash = "sha256:395ae0b9eec565c78a76fffc938b70f52774bf2971245482d31aba47018c5fa9"},
+    {file = "mkdocs_git_revision_date_localized_plugin-1.4.5.tar.gz", hash = "sha256:9e37f1343d314c9cd8f9cbbf117c4bdc1d2d24a0653c5bbd7059d072f2cd0972"},
 ]
 
 [package.dependencies]
 babel = ">=2.7.0"
-GitPython = "*"
+gitpython = ">=3.1.44"
 mkdocs = ">=1.0"
-pytz = "*"
+pytz = ">=2025.1"
 
 [[package]]
 name = "mkdocs-material"
@@ -911,13 +912,13 @@ six = ">=1.5"
 
 [[package]]
 name = "pytz"
-version = "2024.1"
+version = "2025.1"
 description = "World timezone definitions, modern and historical"
 optional = false
 python-versions = "*"
 files = [
-    {file = "pytz-2024.1-py2.py3-none-any.whl", hash = "sha256:328171f4e3623139da4983451950b28e95ac706e13f3f2630a879749e7a8b319"},
-    {file = "pytz-2024.1.tar.gz", hash = "sha256:2a29735ea9c18baf14b448846bde5a48030ed267578472d8955cd0e7443a9812"},
+    {file = "pytz-2025.1-py2.py3-none-any.whl", hash = "sha256:89dd22dca55b46eac6eda23b2d72721bf1bdfef212645d81513ef5d03038de57"},
+    {file = "pytz-2025.1.tar.gz", hash = "sha256:c2db42be2a2518b28e65f9207c4d05e6ff547d1efa4086469ef855e4ab70178e"},
 ]
 
 [[package]]
